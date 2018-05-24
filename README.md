@@ -1,9 +1,9 @@
 # ppi-sanistise
 Regex to tokenise Private Personal Information in python
 
-Thanks to various sources for the Regex, viz;
+## Thanks to various sources for the Regex
 
-Various phone numbers
+Various phone number formats
 http://phoneregex.com/
 
 UK Postcodes
