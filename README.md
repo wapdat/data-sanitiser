@@ -26,6 +26,13 @@ As someone said to me -
 
 *... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25* (that would be me)
 
+## Use cases
+
+* Sanitising data before you feed it in to a ML model
+* Sanitising data if you want to move a copy of data out of Production for test purposes
+* Sanitising logs - re-write logs in-situ to remove PPI as an Infosec control 
+* Data Loss Prevention - script it into your email server to sanitise outbound emails. Could definitley be done in Postfix without too many headaches
+
 ## Stanford NER 
 When I get time I'll plug this in. https://www.nltk.org/_modules/nltk/tag/stanford.html and see what happens with names. It will just be an inline check for names and organisations, and tokenise these.
 
