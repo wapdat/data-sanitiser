@@ -33,13 +33,13 @@ As someone said to me -
 
 ### Current sanitisation capabilities 
 
-  * postcode
-  * social security number
+  * UK postcode
+  * US social security number
   * email address
   * UK phones number
   * US and Canada phone number
   * Payment cards (Amex, BCGlobal, Carte Blanche Card, Diners Club Card, Discover Card, Insta Payment Card, JCB Card, KoreanLocalCard, Laser Card, Maestro Card, Mastercard, Solo Card, Switch Card, Union Pay Card, Visa Card, Visa Master Card)
-
+  * UK and US Zipcodes
 ### To do (NLTK will solve a lot of this)
 
   * person (name, title, initial)
@@ -81,6 +81,10 @@ Various phone number formats
 
 UK Postcodes
 * https://stackoverflow.com/questions/164979/uk-postcode-regex-comprehensive
+
+US & Canadian zipcodes
+* http://geekswithblogs.net/MainaD/archive/2007/12/03/117321.aspx
+* http://html5pattern.com/Postal_Codes
 
 Social Securty Numbers
 * http://rion.io/2013/09/10/validating-social-security-numbers-through-regular-expressions-2/
