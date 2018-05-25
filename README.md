@@ -10,7 +10,7 @@ Essentially, it's a waterfall of regular expressions that are identifying and re
 
 ## Inspiration - models memorise secrets 
 
-The inspiration is this paper. https://arxiv.org/abs/1802.08232  which The Register explains here https://www.theregister.co.uk/2018/03/02/secrets_fed_into_ai_models_as_training_data_can_be_stolen/ Briefly, Google trained their models with credit card numbers and now the card numbers are stored in the model. Whoops!
+The inspiration is this paper. https://arxiv.org/abs/1802.08232  which [The Register](https://www.theregister.co.uk/2018/03/02/secrets_fed_into_ai_models_as_training_data_can_be_stolen/) explains in its inimitable fashion.  Briefly, Google trained their models with credit card numbers and now the card numbers are stored in the model. Whoops!
 
 The recommendation in this paper assumes secrets have a low log perplexity (appears infrequently) but that isn't often a characteristic of some PPI.  There is some PPI with a high log perplexity, and there is PPI that is quite easily identified by pattern.  
 
