@@ -26,6 +26,9 @@ As someone said to me -
 
 *... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25* (that would be me)
 
+## Stanford NER 
+When I get time I'll plug this in. https://www.nltk.org/_modules/nltk/tag/stanford.html and see what happens with names. It will just be an inline check for names and organisations, and tokenise these.
+
 ## Credit to all the various sources for the Regex
 
 There are probably Stack Overflow posts I've missed, happy to be corrected.
