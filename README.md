@@ -30,29 +30,28 @@ As someone said to me -
 
 ### Current capabilities 
 
-postcode
-social security number
-email address
-UK phones mumber
-US and Canada phone number
+  *postcode
+  *social security number
+  *email address
+  *UK phones mumber
+  *US and Canada phone number
 
-### Next 
+### To do 
 
-person (name, title, initial)
-organisation
-address (Street)
-city
-account number
-date (eg DOB but any date)
-time
-money amount
-product name
-card number
-merchant name
-zip code
-state name
-state Code
-
+  *person (name, title, initial)
+  *organisation
+  *address (Street)
+  *city
+  *account number
+  *date (eg DOB but any date)
+  *time
+  *money amount
+  *product name
+  *card number
+  *merchant name
+  *zip code
+  *state name
+  *state Code
 
 ## Use Cases
 
