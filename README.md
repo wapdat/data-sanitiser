@@ -12,14 +12,15 @@ The inspiration was this paper. https://arxiv.org/abs/1802.08232  which The Regi
 
 The recommendation in this paper assumes secrets have a low log perplexity (appears infrequently) but that isn't often a characteristic of some PPI.  There is some PPI with a high log perplexity, and there is PPI that is quite easily identified by pattern.  
 
-*Intuitively, if the defender can identify secrets in the training data, then they can be removed from the model before it is trained. Such an approach guarantees to prevent memorization if the secrets can be identified, since the secrets will not appear in the training data, and thus not be observed by the model during training.
-The key challenge of this approach is how to identify the secrets in the training data. Several heuristics can be used. For example, if the secrets were known to follow some template (e.g., a regular expression), the defender may be able to remove all substrings matching the template from the training data in a preprocessing step. However, such heuristics cannot be exhaustive, and the defender never be aware of all potential templates that may exist in the training data. When the secrets cannot be captured by the heuristics, the defense will fail.* (The Secret Sharer: Measuring Unintended Neural Network Memorization & Extracting Secrets)
+*Intuitively, if the defender can identify secrets in the training data, then they can be removed from the model before it is trained. Such an approach guarantees to prevent memorization if the secrets can be identified, since the secrets will not appear in the training data, and thus not be observed by the model during training.*
+
+*The key challenge of this approach is how to identify the secrets in the training data. Several heuristics can be used. For example, if the secrets were known to follow some template (e.g., a regular expression), the defender may be able to remove all substrings matching the template from the training data in a preprocessing step. However, such heuristics cannot be exhaustive, and the defender never be aware of all potential templates that may exist in the training data. When the secrets cannot be captured by the heuristics, the defense will fail.* (The Secret Sharer: Measuring Unintended Neural Network Memorization & Extracting Secrets)
 
 # What is PPI?
 
-This code will not exhaustively sanitise all PPI. Notably the definition of PPI is not a definitive list. GDPR langauge is intentionally descriptive not definitive. 
+This code will not exhaustively sanitise all PPI because the definition of PPI is not a definitive list. GDPR langauge is intentionally descriptive not definitive. It's a truism - how can you exhaustively identify things you can't define.
 
-It is possible to exhaustively test rules. For example there are 1.6m postcodes in the UK. The regex used here has been tested againast all 1.6m with 100% accuracy.
+It is possible to exhaustively test for some PPI. For example there are 1.6m postcodes in the UK. The regex used here has been tested againast all 1.6m with 100% accuracy.
 
 As someone said to me -
 
