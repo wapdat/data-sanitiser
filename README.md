@@ -5,7 +5,7 @@ Regex to tokenise (remove) Private Personal Information in python.
 
 Essentially, it's a waterfall of regular expressions that are identifying and replacing any words (entities) that match the expected pattern of known personal and private information.
 
-`My name is *Julian Assange*, call me on *07837182333*` **gets sanitised into** `My name is *PERSONNAME*, call me on *UKMOBILE*`
+`My name is Julian Assange, call me on 07867182333` **gets sanitised into** `My name is PERSONNAME, call me on UKMOBILE`
 
 "never feed secrets as training data"
 
