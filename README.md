@@ -72,6 +72,10 @@ When I get time I'll plug in the Stanford NER, https://www.nltk.org/_modules/nlt
 
 There are probably Stack Overflow posts I've missed, happy to be corrected.
 
+Credit Cards
+* https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests
+* https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s20.html
+
 Various phone number formats
 * http://phoneregex.com/
 
