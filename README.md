@@ -20,7 +20,7 @@ The recommendation in this paper assumes secrets have a low log perplexity (appe
 
 This code will not exhaustively sanitise all PPI because the definition of PPI is not a definitive list. GDPR langauge is intentionally descriptive not definitive. It's a truism - how can you exhaustively identify things you can't define.
 
-It is possible to exhaustively test for some PPI. For example there are 1.6m postcodes in the UK. The regex used here has been tested againast all 1.6m with 100% accuracy.
+It is possible to exhaustively test for some PPI. For example there are 1.6m postcodes in the UK. The regex used here has been tested against all 1.6m with 100% accuracy. For some PPI, it's trickier, in particular names and addresses. Howevr it is conceivable to exhaustively test every name and addresses in the UK Electoral Register.
 
 As someone said to me -
 
