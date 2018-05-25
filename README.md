@@ -36,7 +36,7 @@ As someone said to me -
   * postcode
   * social security number
   * email address
-  * UK phones mumber
+  * UK phones number
   * US and Canada phone number
 
 ### To do (NLTK will solve a lot of this)
