@@ -2,7 +2,7 @@
 
 Regex to tokenise (remove) Private Personal Information in python. 
 
-_My name is *Julian Assange*, call me on *07837182333*_ gets converted to _My name is *PERSONNAME*, call me on *UKMOBILE*_
+My name is *Julian Assange*, call me on *07837182333* **gets converted to** _My name is *PERSONNAME*, call me on *UKMOBILE*_
 
 Essentially, it's a waterfall of regular expressions that are identifying and replacing any words (entities) that match the expected pattern of known personal and private information.
 
