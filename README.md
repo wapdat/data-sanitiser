@@ -39,20 +39,21 @@ As someone said to me -
   * UK phones number
   * US and Canada phone number
   * Payment cards (Amex, BCGlobal, Carte Blanche Card, Diners Club Card, Discover Card, Insta Payment Card, JCB Card, KoreanLocalCard, Laser Card, Maestro Card, Mastercard, Solo Card, Switch Card, Union Pay Card, Visa Card, Visa Master Card)
-  * UK and US Zipcodes
+  * US Zipcodes
+  * Canadian Postcodes
+  * account number (any 5 -12 length of digits - do this last so not to pick up more specific matches)
+  
 ### To do (NLTK will solve a lot of this)
 
   * person (name, title, initial)
   * organisation
   * address (Street)
   * city
-  * account number
   * date (eg DOB but any date)
   * time
   * money amount
   * product name
   * merchant name
-  * zip code
   * state name
   * state Code
 
@@ -71,6 +72,9 @@ When I get time I'll plug in the Stanford NER, https://www.nltk.org/_modules/nlt
 ## Credit to all the various sources for the Regex
 
 There are probably Stack Overflow posts I've missed, happy to be corrected.
+
+Go here first
+ * http://cldr.unicode.org/
 
 Credit Cards
 * https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests
