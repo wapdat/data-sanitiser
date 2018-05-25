@@ -2,9 +2,10 @@
 
 Regex to tokenise (remove) Private Personal Information in python. 
 
-My name is *Julian Assange*, call me on *07837182333* **gets sanitised into** _My name is *PERSONNAME*, call me on *UKMOBILE*_
 
 Essentially, it's a waterfall of regular expressions that are identifying and replacing any words (entities) that match the expected pattern of known personal and private information.
+
+My name is *Julian Assange*, call me on *07837182333* **gets sanitised into** _My name is *PERSONNAME*, call me on *UKMOBILE*_
 
 "never feed secrets as training data"
 
@@ -12,7 +13,7 @@ Essentially, it's a waterfall of regular expressions that are identifying and re
 
 The inspiration is this paper. https://arxiv.org/abs/1802.08232  which [The Register](https://www.theregister.co.uk/2018/03/02/secrets_fed_into_ai_models_as_training_data_can_be_stolen/) explains in its inimitable fashion.  Briefly, Google trained their models with credit card numbers and now the card numbers are stored in the model. Whoops!
 
-The recommendation in this paper assumes secrets have a low log perplexity (appears infrequently) but that isn't often a characteristic of some PPI.  There is some PPI with a high log perplexity, and there is PPI that is quite easily identified by pattern.  
+The [papers](https://arxiv.org/abs/1802.08232) recommendation to overcome the vulnerability assumes secrets have a low log perplexity (appears infrequently) but that isn't often a characteristic of some PPI.  There is some PPI with a high log perplexity, and there is PPI that is quite easily identified by pattern.  
 
 >"Intuitively, if the defender can identify secrets in the training data, then they can be removed from the model before it is trained. Such an approach guarantees to prevent memorization if the secrets can be identified, since the secrets will not appear in the training data, and thus not be observed by the model during training."
 
