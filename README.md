@@ -1,6 +1,6 @@
 # Remove Personal and Private Information
 
-Regex to tokenise (remove) Private Personal Information in python. 
+Code (mostly regular expresssion and Stanford NTLK) to tokenise (remove) Private Personal Information (PPI) in python. 
 
 
 Essentially, it's a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information.
