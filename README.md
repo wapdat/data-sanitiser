@@ -10,9 +10,11 @@ However the recommended approach in that assumes secrets have a low log perplexi
 *Intuitively, if the defender can identify secrets in the training data, then they can be removed from the model before it is trained. Such an approach guarantees to prevent memorization if the secrets can be identified, since the secrets will not appear in the training data, and thus not be observed by the model during training.
 The key challenge of this approach is how to identify the secrets in the training data. Several heuristics can be used. For example, if the secrets were known to follow some template (e.g., a regular expression), the defender may be able to remove all substrings matching the template from the training data in a preprocessing step. However, such heuristics cannot be exhaustive, and the defender never be aware of all potential templates that may exist in the training data. When the secrets cannot be captured by the heuristics, the defense will fail.* (The Secret Sharer: Measuring Unintended Neural Network Memorization & Extracting Secrets)
 
-# Intended Use & Limitations
+# What is PPI
 
-This will not exhaustively sanitise all PPI. Notably the deficnitionof PPI is not a defcitive list. GDPR langauge is intentianally descriptive not definitive.  
+This code will not exhaustively sanitise all PPI. Notably the definition of PPI is not a definitive list. GDPR langauge is intentionally descriptive not definitive. As someoe said to me -
+
+*... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are constantly being created e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25* (that would be me)
 
 ## Credit to all the various sources for the Regex
 
