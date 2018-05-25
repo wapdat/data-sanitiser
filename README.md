@@ -58,7 +58,7 @@ As someone said to me -
 
 ## Use Cases
 
-* Sanitising data before you feed it in to a ML model
+* Sanitising training data before you feed it in to a Machine Learning model
 * Sanitising data if you want to move a copy of data out of Production for test purposes
 * Sanitising logs - re-write logs in-situ to remove PPI as an Infosec control 
 * Data Loss Prevention - script it into your email server to sanitise outbound emails. Could definitley be done in Postfix without too many headaches
