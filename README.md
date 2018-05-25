@@ -31,7 +31,7 @@ As someone said to me -
 
 >... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25
 
-### Current capabilities 
+### Current sanitisation capabilities 
 
   * postcode
   * social security number
