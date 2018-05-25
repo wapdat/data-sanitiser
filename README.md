@@ -2,6 +2,8 @@
 
 Regex to tokenise (remove) Private Personal Information in python. 
 
+_My name is *Julian Assange*, call me on *07837182333*_ gets converted to _My name is *PERSONNAME*, call me on *UKMOBILE*_
+
 Essentially, it's a waterfall of regular expressions that are identifying and replacing any words (entities) that match the expected pattern of known personal and private information.
 
 "never feed secrets as training data"
@@ -26,15 +28,17 @@ As someone said to me -
 
 *... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25* (that would be me)
 
-## Use cases
+## Use Cases
 
 * Sanitising data before you feed it in to a ML model
 * Sanitising data if you want to move a copy of data out of Production for test purposes
 * Sanitising logs - re-write logs in-situ to remove PPI as an Infosec control 
 * Data Loss Prevention - script it into your email server to sanitise outbound emails. Could definitley be done in Postfix without too many headaches
 
+_NB There is no absolute gurantee that this will remove all PPI information._
+
 ## Stanford NER 
-When I get time I'll plug this in. https://www.nltk.org/_modules/nltk/tag/stanford.html and see what happens with names. It will just be an inline check for names and organisations, and tokenise these.
+When I get time I'll plug in the Stanford NER, https://www.nltk.org/_modules/nltk/tag/stanford.html and see what happens with names. It will just be an inline check for names and organisations, and tokenise these.
 
 ## Credit to all the various sources for the Regex
 
