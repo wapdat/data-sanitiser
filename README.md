@@ -28,6 +28,32 @@ As someone said to me -
 
 *... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25* (that would be me)
 
+### Current capabilities 
+
+postcode
+social security number
+email address
+UK phones mumber
+US and Canada phone number
+
+### Next 
+
+person (name, title, initial)
+organisation
+address (Street)
+city
+account number
+date (eg DOB but any date)
+time
+money amount
+product name
+card number
+merchant name
+zip code
+state name
+state Code
+
+
 ## Use Cases
 
 * Sanitising data before you feed it in to a ML model
