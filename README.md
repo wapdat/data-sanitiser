@@ -39,7 +39,7 @@ As someone said to me -
   * UK phones mumber
   * US and Canada phone number
 
-### To do 
+### To do (NLTK will solve a lot of this)
 
   * person (name, title, initial)
   * organisation
