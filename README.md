@@ -6,9 +6,9 @@ Essentially, it's a waterfall of regular expressions that are identifying and re
 
 "never feed secrets as training data"
 
-## Inpiration - models memorise secrets 
+## Inspiration - models memorise secrets 
 
-The inspiration was this paper. https://arxiv.org/abs/1802.08232  which The Register explains here https://www.theregister.co.uk/2018/03/02/secrets_fed_into_ai_models_as_training_data_can_be_stolen/ Breifly, Google trained their models with credit card numbers and now the card numbers are stored in the model. Whoops!
+The inspiration is this paper. https://arxiv.org/abs/1802.08232  which The Register explains here https://www.theregister.co.uk/2018/03/02/secrets_fed_into_ai_models_as_training_data_can_be_stolen/ Briefly, Google trained their models with credit card numbers and now the card numbers are stored in the model. Whoops!
 
 The recommendation in this paper assumes secrets have a low log perplexity (appears infrequently) but that isn't often a characteristic of some PPI.  There is some PPI with a high log perplexity, and there is PPI that is quite easily identified by pattern.  
 
@@ -18,13 +18,13 @@ The recommendation in this paper assumes secrets have a low log perplexity (appe
 
 # What is PPI?
 
-This code will not exhaustively sanitise all PPI because the definition of PPI is not a definitive list. GDPR langauge is intentionally descriptive not definitive. It's a truism - how can you exhaustively identify things you can't define.
+This code will not exhaustively sanitise all PPI because the definition of PPI is not a definitive list. GDPR language is intentionally descriptive not definitive. It's a truism - how can you exhaustively identify things you can't define.
 
-However, it is possible to exhaustively test for some PPI. For example there are 1.6m postcodes in the UK. The regex used here has been tested against all 1.6m with 100% accuracy. For some PPI, it's trickier, in particular names and addresses. However it is conceivable to exhaustively test your rules against every name and address in the UK Electoral Register.
+However, it is possible to exhaustively test for some PPI. For example, there are 1.6m postcodes in the UK. The regex used here has been tested against all 1.6m with 100% accuracy. For some PPI, it's trickier, in particular names and addresses. However, it is conceivable to exhaustively test your rules against every name and address in the UK Electoral Register.
 
 As someone said to me -
 
-*... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are constantly being created e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25* (that would be me)
+*... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25* (that would be me)
 
 ## Credit to all the various sources for the Regex
 
