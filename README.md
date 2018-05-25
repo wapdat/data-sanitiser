@@ -38,6 +38,7 @@ As someone said to me -
   * email address
   * UK phones number
   * US and Canada phone number
+  * Payment cards (Amex, BCGlobal, Carte Blanche Card, Diners Club Card, Discover Card, Insta Payment Card, JCB Card, KoreanLocalCard, Laser Card, Maestro Card, Mastercard, Solo Card, Switch Card, Union Pay Card, Visa Card, Visa Master Card)
 
 ### To do (NLTK will solve a lot of this)
 
@@ -50,7 +51,6 @@ As someone said to me -
   * time
   * money amount
   * product name
-  * card number
   * merchant name
   * zip code
   * state name
