@@ -63,7 +63,7 @@ As someone said to me -
 * Sanitising logs - re-write logs in-situ to remove PPI as an Infosec control 
 * Data Loss Prevention - script it into your email server to sanitise outbound emails. Could definitley be done in Postfix without too many headaches
 
-_NB There is no absolute gurantee that this will remove all PPI information._
+_NB There is no guarantee that this (or any thing) will remove all PPI information._
 
 ## Stanford NER 
 When I get time I'll plug in the Stanford NER, https://www.nltk.org/_modules/nltk/tag/stanford.html and see what happens with names. It will just be an inline check for names and organisations, and tokenise these.
