@@ -105,3 +105,13 @@ Email Addresses
 This project is interesting.
 * https://github.com/dssg/ushine-learning/wiki/Identify-private-information-in-report-text
 
+# FAQ
+
+Why do I get requests to download stuff the first time I run it?
+
+NTLK needs some basic libraries to run. In the error messages the first time you use NTLK it will tell you what you need.
+`
+  >>> import nltk
+  >>> nltk.download('maxent_ne_chunker')
+`
+
