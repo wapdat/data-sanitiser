@@ -4,8 +4,10 @@ Code (mostly regular expresssion and Stanford NTLK) to tokenise (remove) Private
 
 
 Essentially, it's a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information.
-
-`My name is Julian Assange, call me on 07867182333` **becomes** `My name is PERSONNAME, call me on UKMOBILE`
+It turns this...
+`My main email is dummy@gmail.com and lindsay.smith@telrock.com  N16 9Ln some words holiday home postcode w1 2nh 078-06-1120 mobile 078371827735 uk phine number 0207 183 1573  ssn is 555-555-1234 name is Lindsay Smith UK and I work at Telrock`
+into this.
+`My main email is NAME@EMAIL.COM and NAME@EMAIL.COM  UKPOSTCODE some words holiday home postcode UKPOSTCODE SSN mobile UKPHONE5 uk phine number UKPHONE  ssn is USPHONE name is PERSON and I work at ORGANIZATION`
 
 "never feed secrets as training data"
 
@@ -67,7 +69,7 @@ As someone said to me -
 _NB There is no guarantee that this (or any thing) will remove all PPI information._
 
 ## Stanford NER 
-When I get time I'll plug in the Stanford NER, https://www.nltk.org/_modules/nltk/tag/stanford.html and see what happens with names. It will just be an inline check for names and organisations, and tokenise these.
+It uses the default implementation of NER available in NLTK. It does ok at recognising names. GPE stands for "Geo-political entity", ie location.
 
 ## Credit to all the various sources for the Regex
 
