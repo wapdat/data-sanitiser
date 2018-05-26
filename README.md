@@ -3,7 +3,7 @@
 Code (regular expresssion and NTLK) to tokenise (remove) Private Personal Information (PPI) in python. 
 
 
-Essentially, it's a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information.
+Essentially, NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information.
 
 It turns this...
 
