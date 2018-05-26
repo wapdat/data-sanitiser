@@ -109,5 +109,5 @@ This project is interesting.
 
 Why do I get requests from NTLK to download stuff the first time I run it?
 
-NTLK needs some basic models to run, and it decides the first times it is run which ones it needs. In the error messages it will tell you what you need to do and how to do it. There are a few nltk.download('punkt'), nltk.download('averaged_perceptron_tagger'), nltk.download('maxent_ne_chunker'), nltk.download('words').
+NTLK needs some basic models to run, and it decides the first times it is run which ones it needs. In the error messages it will tell you what you need to do and how to do it. There are a few nltk.download('punkt'), nltk.download('averaged_perceptron_tagger'), nltk.download('maxent_ne_chunker'), nltk.download('words'). Read this https://github.com/nltk/nltk/wiki/Frequently-Asked-Questions-(Stackoverflow-Edition)
 
