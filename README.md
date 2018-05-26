@@ -109,9 +109,5 @@ This project is interesting.
 
 Why do I get requests to download stuff the first time I run it?
 
-NTLK needs some basic libraries to run. In the error messages the first time you use NTLK it will tell you what you need.
-`
-  >>> import nltk
-  >>> nltk.download('maxent_ne_chunker')
-`
+NTLK needs some basic libraries to run. In the error messages the first time you use NTLK it will tell you what you need. 
 
