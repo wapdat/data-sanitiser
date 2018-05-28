@@ -1,9 +1,9 @@
 # Remove Personal and Private Information
 
-Code (regular expresssion and NTLK) to tokenise (remove) Private Personal Information (PPI) in python. 
+Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Information (PPI) in Python. 
 
 
-Essentially, NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information.
+Essentially, it uses NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information.
 
 It turns this...
 
@@ -62,6 +62,7 @@ As someone said to me -
   * time
   * money amount
   * product name
+  * and for fun lets do profanities
 
 ## Use Cases
 
@@ -72,7 +73,7 @@ As someone said to me -
 
 _NB There is no guarantee that this (or any thing) will remove all PPI information._
 
-## Stanford NER 
+## NLTK 
 It uses the default implementation of NER available in NLTK. It does ok at recognising names. GPE stands for "Geo-political entity", ie location.
 
 ## Credit to all the various sources for the Regex
