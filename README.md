@@ -1,6 +1,6 @@
 # Remove Personal and Private Information
 
-Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Information (PPI) in Python. 
+Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Information (PPI) in unstructured data. 
 
 
 Essentially, it uses NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information.
@@ -103,12 +103,19 @@ Social Securty Numbers
 Email Addresses
 * http://emailregex.com/
 
-This project is interesting.
+These projects are interesting. Scrubadub is similar to this but I prefer the simplicity of a waterfall of Regex.
 * https://github.com/dssg/ushine-learning/wiki/Identify-private-information-in-report-text
+* https://github.com/datascopeanalytics/scrubadub
 
 # FAQ
 
 Why do I get requests from NTLK to download stuff the first time I run it?
 
 NTLK needs some basic models to run, and it decides the first times it is run which ones it needs. In the error messages it will tell you what you need to do and how to do it. There are a few nltk.download('punkt'), nltk.download('averaged_perceptron_tagger'), nltk.download('maxent_ne_chunker'), nltk.download('words'). Read this https://github.com/nltk/nltk/wiki/Frequently-Asked-Questions-(Stackoverflow-Edition)
+
+# Interesting Papers
+
+Out of date in terms of legal status of PPI but good list of techniques.
+* http://www.orafaq.com/papers/data_sanitization.pdf
+
 
