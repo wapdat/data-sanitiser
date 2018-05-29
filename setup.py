@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 
-with open('README.rst') as f:
+with open('README.md') as f:
     readme = f.read()
 
 with open('LICENSE') as f:
@@ -12,7 +12,7 @@ with open('LICENSE') as f:
 setup(
     name='sample',
     version='0.1.0',
-    description='PPI Sanitiser',
+    description='Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Information (PPI) in Python.',
     long_description=readme,
     author='Lindsay Smith',
     author_email='wapdat@gmail.com',

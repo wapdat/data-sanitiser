@@ -62,3 +62,5 @@ def replacePPI(str):
     str = regexReplace(str, 'ACCOUNTNO', 'account number', '\d{5-12')
     return str
     
+def getSubstituteText(key, type):
+    return ""
