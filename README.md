@@ -3,7 +3,7 @@
 Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Information (PPI) in unstructured data. 
 
 
-Essentially, it uses NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information.
+Essentially, it uses NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information, in a way to retain some level of readability, and semantic meaning in the data.
 
 It turns this...
 
@@ -17,9 +17,9 @@ into this.
 
 ## Inspiration - models memorise secrets 
 
-The inspiration is this paper. https://arxiv.org/abs/1802.08232  which [The Register](https://www.theregister.co.uk/2018/03/02/secrets_fed_into_ai_models_as_training_data_can_be_stolen/) explains in its inimitable fashion.  Briefly, Google trained their models with credit card numbers and now the card numbers are stored in the model. Whoops!
+The inspiration for this project is from this paper. https://arxiv.org/abs/1802.08232  which [The Register](https://www.theregister.co.uk/2018/03/02/secrets_fed_into_ai_models_as_training_data_can_be_stolen/) explains in its inimitable fashion.  Briefly, Google trained their models with credit card numbers and now the card numbers are stored in the model. Whoops!
 
-The [paper](https://arxiv.org/abs/1802.08232) has a decent suggestion to overcome the vulnerability, but assumes secrets have a low log perplexity (appears infrequently). That isn't often a characteristic of some PPI.  There is some PPI with a high log perplexity, and there is PPI that is quite easily identified by pattern.  
+The [paper](https://arxiv.org/abs/1802.08232) has a decent suggestion to overcome the vulnerability, but assumes secrets have a low log perplexity (appears infrequently). That isn't often a characteristic of some PPI.  There is some PPI with a high log perplexity, and there is PPI that is quite easily identified by pattern.  What do you do if your training data is full of PPI?
 
 >"Intuitively, if the defender can identify secrets in the training data, then they can be removed from the model before it is trained. Such an approach guarantees to prevent memorization if the secrets can be identified, since the secrets will not appear in the training data, and thus not be observed by the model during training."
 
@@ -38,6 +38,8 @@ As someone said to me -
 >... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25
 
 ### Current sanitisation capabilities 
+
+Refer to the tests to understand exactly what these data items mean and how wide the matcing works.
 
   * UK postcode
   * US social security number
@@ -86,6 +88,7 @@ Go here first
 Credit Cards
 * https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests
 * https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s20.html
+* http://www.richardsramblings.com/2012/12/the-perfect-credit-card-number-regex/
 
 Various phone number formats
 * http://phoneregex.com/
@@ -102,6 +105,17 @@ Social Securty Numbers
 
 Email Addresses
 * http://emailregex.com/
+
+Profanity & Censorship
+UK List from OfCom
+* https://www.ofcom.org.uk/__data/assets/pdf_file/0023/91625/OfcomQRG-AOC.pdf
+Various lits of various provenance
+* https://code.google.com/archive/p/badwordslist/downloads
+* https://www.freewebheaders.com/full-list-of-bad-words-banned-by-google/
+* http://www.bannedwordlist.com/
+Discusion on censorship in different counties
+* https://en.wikipedia.org/wiki/Censorship_by_Google
+
 
 These projects are interesting. Scrubadub is similar to this but I prefer the simplicity of a waterfall of Regex.
 * https://github.com/dssg/ushine-learning/wiki/Identify-private-information-in-report-text
