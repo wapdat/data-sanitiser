@@ -1,6 +1,6 @@
-# Remove Personal and Private Information
+# Sanitise (by removal, tokenisaction, or redactions) Personal and Private Data
 
-Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Information (PPI) in unstructured data. 
+Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Data in unstructured data. 
 
 
 Essentially, it uses NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information, in a way to retain some level of readability, and semantic meaning in the data.
