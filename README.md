@@ -1,9 +1,8 @@
-# Sanitise (by removal, tokenisaction, or redactions) Personal and Private Data
+# Sanitise (by removal, tokenisaction, or redaction) Personal and Private Data
 
 Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Data in unstructured data. 
 
-
-Essentially, it uses NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information, in a way to retain some level of readability, and semantic meaning in the data.
+Essentially, it cleans data of personal information, using NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information. It does this in a way to retain some level of readability, and semantic meaning in the data.
 
 It turns this...
 
@@ -13,9 +12,11 @@ into this.
 
 `My email address is  NAME@EMAIL.COM and NAME@EMAIL.COM  UKPOSTCODE I like bank holidays and speaking french. my ssn is  SSN call me on UKPHONE or UKPHONE  - your sincerely  PERSON and by the way  I work at ORGANIZATION`
 
-"never feed secrets as training data"
+
 
 ## Inspiration - models memorise secrets 
+
+"never feed secrets as training data"
 
 The inspiration for this project is from this paper. https://arxiv.org/abs/1802.08232  which [The Register](https://www.theregister.co.uk/2018/03/02/secrets_fed_into_ai_models_as_training_data_can_be_stolen/) explains in its inimitable fashion.  Briefly, Google trained their models with credit card numbers and now the card numbers are stored in the model. Whoops!
 
@@ -27,17 +28,25 @@ The [paper](https://arxiv.org/abs/1802.08232) has a decent suggestion to overcom
 
 [The Secret Sharer: Measuring Unintended Neural Network Memorization & Extracting Secrets](https://arxiv.org/abs/1802.08232)
 
-# What is PPI?
+# What is Personal and Private Data?
 
-This code will not exhaustively sanitise all PPI because the definition of PPI is not a definitive list. GDPR language is intentionally descriptive not definitive. It's a truism - how can you exhaustively identify things you can't define.
+Here's the thing - there is no difinitive list, at one level it is intuitively obvious, but there is no "Periodic Table" of personal data. 
+
+This code will not exhaustively sanitise all Personal and Private Data because the definition of Personal and Private Data is not a definitive list. GDPR language is intentionally descriptive not definitive. It's a truism - how can you exhaustively identify things you can't define.
 
 However, it is possible to exhaustively test for some PPI. For example, there are 1.6m postcodes in the UK. The regex used here has been tested against all 1.6m with 100% accuracy. For some PPI, it's trickier, in particular names and addresses. However, it is conceivable to exhaustively test your rules against every name and address in the UK Electoral Register.
 
 As someone said to me -
 
->... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, MildMay pub, Islington 5.30pm Friday May 25
+>... there is no definitive list of attributes, indeed the challenge is with modern technology/data sources is that new attributes are continually being created, e.g. Geolocation data, timestamp data, descriptive data that can identify an individual – male, Kiwi accent, blue jeans with turnups, blue open neck sweater, black Doc Martin boots, Mildmay pub, Islington 5.30pm Friday May 25
 
-### Current sanitisation capabilities 
+## What about US, US and everyother countries defintion of Personal and Private data?
+
+>U.S. and EU privacy law diverge greatly. At the foundational level, they differ in their underlying philosophy: In the United States, privacy law focuses on redressing consumer harm and balancing privacy with efficient commercial transactions. In the European Union, privacy is hailed as a fundamental right that can trump other interests. [Paul M. Schwartz and Danie J. Solove, Reconciling Personal Information in the United States and European Union, 102 Calif. L. Rev. 877 (2014).](https://scholarship.law.berkeley.edu/californialawreview/vol102/iss4/7/)
+
+European data protection law does not utilise the concept of PII, and its scope is instead determined by non-synonymous, wider concept of "personal data". Good overview found on [wikipedia - Personally_identifiable_information](https://en.wikipedia.org/wiki/Personally_identifiable_information)
+
+### Current Data Cleaning capabilities 
 
 Refer to the tests to understand exactly what these data items mean and how wide the matcing works.
 
@@ -131,5 +140,8 @@ NTLK needs some basic models to run, and it decides the first times it is run wh
 
 Out of date in terms of legal status of PPI but good list of techniques.
 * http://www.orafaq.com/papers/data_sanitization.pdf
+
+Guide to Protecting the Confidentiality of Personally Identifiable Information (PII) - Recommendations of the National Institute of Standards and Technology
+* https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf
 
 
