@@ -8,7 +8,7 @@ It turns this...
 
 `My email address is  dummy@gmail.com and lindsay.smith@telrock.com  N16 9Ln I like bank holidays and speaking french. my ssn is  078-06-1120 call me on 078371827735 or 0207 183 1573  - your sincerely  Lindsay Smith and by the way  I work at Telrock`
 
-into this. (something you could pass to a 3rd party who wouldn't be classed a GDPR Processor)
+into this. (something you could pass to a 3rd party and wouldn't need to be classed a GDPR Processor)
 
 `My email address is  NAME@EMAIL.COM and NAME@EMAIL.COM  UKPOSTCODE I like bank holidays and speaking french. my ssn is  SSN call me on UKPHONE or UKPHONE  - your sincerely  PERSON and by the way  I work at ORGANIZATION`
 
