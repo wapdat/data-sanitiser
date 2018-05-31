@@ -8,7 +8,7 @@ It turns this...
 
 `My email address is  dummy@gmail.com and lindsay.smith@telrock.com  N16 9Ln I like bank holidays and speaking french. my ssn is  078-06-1120 call me on 078371827735 or 0207 183 1573  - your sincerely  Lindsay Smith and by the way  I work at Telrock`
 
-into this. (something you could pass to a 3rd party and they wouldn't need to be classed a GDPR Processor)
+into this. (something you could pass to a 3rd party and they wouldn't need to be classed as a GDPR Processor)
 
 `My email address is  NAME@EMAIL.COM and NAME@EMAIL.COM  UKPOSTCODE I like bank holidays and speaking french. my ssn is  SSN call me on UKPHONE or UKPHONE  - your sincerely  PERSON and by the way  I work at ORGANIZATION`
 
@@ -30,7 +30,7 @@ The [paper](https://arxiv.org/abs/1802.08232) has a decent suggestion to overcom
 
 # What is Personal and Private Data?
 
-Here's the thing - there is no difinitive list, at one level it is intuitively obvious, but there is no "Periodic Table" of personal data. 
+Here's the thing - there is no exhaustive list.  At one level it is intuitive, but at best the guidance you will read is "data like examples a, b, c is personal/private/sensitive data". NIST in the US and the ICO in the UK provide such examples. (I'm working on the "periodic table" of personal, private and sensitive data)
 
 This code will not exhaustively sanitise all Personal and Private Data because the definition of Personal and Private Data is not a definitive list. GDPR language is intentionally descriptive not definitive. It's a truism - how can you exhaustively identify things you can't define.
 
