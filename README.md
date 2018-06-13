@@ -1,18 +1,16 @@
 # Sanitise (by removal, tokenisaction, or redaction) Personal and Private Data
 
-Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Data in unstructured data. 
+Code (regular expresssions and NTLK) to tokenise (remove) Private Personal Data in unstructured data.
 
 Essentially, it cleans data of personal information, using NTLK Named Entity Recognition, along with a waterfall of regular expressions that identify and replace any words (entities) that match the expected pattern of known personal and private information. It does this in a way to retain some level of readability, and semantic meaning in the data.
 
 It turns this...
 
-`My email address is  dummy@gmail.com and lindsay.smith@telrock.com  N16 9Ln I like bank holidays and speaking french. my ssn is  078-06-1120 call me on 078371827735 or 0207 183 1573  - your sincerely  Lindsay Smith and by the way  I work at Telrock`
+`My email address is  myhomeemail@gmail.com and lindsay.smith@telrock.com  N16 9Ln I like bank holidays and speaking french. my ssn is  078-06-1120 call me on 078371827735 or 0207 183 1573  - your sincerely  Lindsay Smith and by the way  I work at Telrock`
 
 into this. (something you could pass to a 3rd party and they wouldn't need to be classed as a GDPR Processor)
 
 `My email address is  NAME@EMAIL.COM and NAME@EMAIL.COM  UKPOSTCODE I like bank holidays and speaking french. my ssn is  SSN call me on UKPHONE or UKPHONE  - your sincerely  PERSON and by the way  I work at ORGANIZATION`
-
-
 
 ## Inspiration - models memorise secrets 
 
@@ -48,7 +46,7 @@ European data protection law does not utilise the concept of PII, and its scope 
 
 ### Current Data Cleaning capabilities 
 
-Refer to the tests to understand exactly what these data items mean and how wide the matcing works.
+Refer to the tests to understand exactly what these data items mean and how wide the matching works.
 
   * UK postcode
   * US social security number
@@ -81,11 +79,12 @@ Refer to the tests to understand exactly what these data items mean and how wide
 * Sanitising data if you want to move a copy of data out of Production for test purposes
 * Sanitising logs - re-write logs in-situ to remove PPI as an Infosec control 
 * Data Loss Prevention - script it into your email server to sanitise outbound emails. Could definitley be done in Postfix without too many headaches
+* Sanitising historical audit data
 
 _NB There is no guarantee that this (or any thing) will remove all PPI information._
 
 ## NLTK 
-It uses the default implementation of NER available in NLTK. It does ok at recognising names. GPE stands for "Geo-political entity", ie location.
+It uses the default implementation of NER available in NLTK. It does OK at recognising names. GPE stands for "Geo-political entity", ie the name of a location like a City.
 
 ## Credit to all the various sources for the Regex
 
@@ -99,6 +98,9 @@ Credit Cards
 * https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s20.html
 * http://www.richardsramblings.com/2012/12/the-perfect-credit-card-number-regex/
 
+Test Card Numbers
+* https://www.paypalobjects.com/en_AU/vhelp/paypalmanager_help/credit_card_numbers.htm
+* https://www.freeformatter.com/credit-card-number-generator-validator.html
 Various phone number formats
 * http://phoneregex.com/
 

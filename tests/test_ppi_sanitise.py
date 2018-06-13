@@ -41,7 +41,7 @@ def test_cardnum():
     assert sanitise.replacePPI('test 371449635398431') == 'test CARDNUM'
     # Commercial Amex
     assert sanitise.replacePPI('test 378734493671000') == 'test CARDNUM'
-    # Australina Bankcard  
+    # Australian Bankcard  
     assert sanitise.replacePPI('test 5610591081018250') == 'test CARDNUM'
     
 
