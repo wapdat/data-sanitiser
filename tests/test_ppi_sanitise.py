@@ -30,6 +30,22 @@ def test_ssn():
     assert sanitise.replacePPI('test 078-05-1120') != 'test SSN' 
     assert sanitise.replacePPI('test 219-09-9999') != 'test SSN'   
 
+def test_canada_postcode():
+    assert sanitise.replacePPI('test V9A 7N2') == 'test POSTCODECA'
 
+def test_us_zipcode():
+    assert sanitise.replacePPI('test 77801') == 'test ZIPCODEUS'
+       
+def test_cardnum():
+    # Consumer Amex
+    assert sanitise.replacePPI('test 371449635398431') == 'test CARDNUM'
+    # Commercial Amex
+    assert sanitise.replacePPI('test 378734493671000') == 'test CARDNUM'
+    # Australina Bankcard  
+    assert sanitise.replacePPI('test 5610591081018250') == 'test CARDNUM'
+    
+
+
+    
     
     
