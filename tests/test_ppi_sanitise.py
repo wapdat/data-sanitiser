@@ -42,10 +42,53 @@ def test_cardnum():
     # Commercial Amex
     assert sanitise.replacePPI('test 378734493671000') == 'test CARDNUM'
     # Australian Bankcard  
-    assert sanitise.replacePPI('test 5610591081018250') == 'test CARDNUM'
-    
+    #assert sanitise.replacePPI('test 5610591081018250') == 'test CARDNUM'
+    # VISA:
+    assert sanitise.replacePPI('test 4189514333444318') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 4532904128495944') == 'test CARDNUM'
+    #assert sanitise.replacePPI('test 4556235228575679957') == 'test CARDNUM'
+    # Discover:
+    assert sanitise.replacePPI('test 6011140394576324') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 6011947899660985') == 'test CARDNUM'
+    #assert sanitise.replacePPI('test 6011110646001136629') == 'test CARDNUM'    
+    # Diners Club - Carte Blanche:
+    assert sanitise.replacePPI('test 30563039743969') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 30397311754059') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 30390414367101') == 'test CARDNUM' 
+
+    # Visa Electron:
+    #assert sanitise.replacePPI('test 4913285379677151') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 4508300385930014') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 4917576565198556') == 'test CARDNUM'
+    # MasterCard:
+    assert sanitise.replacePPI('test 5362094316989957') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 2720992245099208') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 2221000131482316') == 'test CARDNUM'
+    # JCB:
+    assert sanitise.replacePPI('test 3539740511407301') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 3540232027278464') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 3537622269740481004') == 'test CARDNUM'
+    # Diners Club - International:
+    assert sanitise.replacePPI('test 36076547569788') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 36615981798112') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 36540004508860') == 'test CARDNUM'
+    # InstaPayment:
+    assert sanitise.replacePPI('test 6377564681522097') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 6392565607142788') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 6394009429937768') == 'test CARDNUM'
+    # American Express (AMEX):
+    assert sanitise.replacePPI('test 342618466580053') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 348306096076338') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 370788278587177') == 'test CARDNUM'
+    # Diners Club - North America:
+    assert sanitise.replacePPI('test 5513754137519741') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 5469096128695682') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 5542777111734585') == 'test CARDNUM'
+    # Maestro:
+    assert sanitise.replacePPI('test 5893403432036155') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 5018161721191285') == 'test CARDNUM'
+    assert sanitise.replacePPI('test 5893341704932828') == 'test CARDNUM'
 
 
-    
-    
-    
+
+
